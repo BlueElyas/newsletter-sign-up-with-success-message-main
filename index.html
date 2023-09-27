@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png"> <!--Favicon-->
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <!-- CSS Style sheet -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Sign-up form start -->
+  <div class="grid container" id="grid"> <!--This div is to create a grid display for desktop view-->
+    <div class="content-desktop"> <!-- This div is to help placing items when in desktop view-->
+      <header class="hero" id="hero">
+        <img src="assets/images/illustration-sign-up-mobile.svg" alt="" class="hero-image">
+        <div class="container hero-text">
+          <h1>Stay updated!</h1>
+          <h5>Join 60,000+ product managers receiving monthly updates on:</h5>
+        </div>
+      </header>
+      <main>
+        <section id="subscribe-section">
+          <div class="container list">
+            <ul>
+              <li> Product discovery and building what matters</li>
+              <li>Measuring to ensure updates are a success</li>
+              <li>And much more!</li>
+            </ul>
+          </div>
+            <!-- Form HTML -->
+          <div class="container">
+            <form>
+              <div class="labels">
+                <span class="email-label">Email address </span><span class="false-input-label" id="invalid-email">Valid email required</span>
+              </div>
+              <input
+                pattern="^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$" type="email" required
+                placeholder="email@company.com"
+                id="email-input">
+              <button class="btn" type="button" id="subsrcibe-btn">Subscribe to monthly newsletter</button>
+            </form>
+          </div>
+        </section>
+      </div>
+      <div class="desktop-image">
+        <img src="assets/images/illustration-sign-up-desktop.svg" alt="" class="hero-image-desktop" id="hero-image-desktop">
+      </div>
+    </div>
+    <!-- Sign-up form end -->
+
+    <!-- Success message start -->
+    <section class="gratitude-section">
+      <div class="container gratitude gratitude-desktop" id="gratitude">
+        <img src="assets/images/icon-success.svg" alt="">
+        <h1>Thanks for <br>subscribing!</h1>
+        <p class="gratitude-text">A confirmation email has been sent to <strong>ash@loremcompany.com.</strong>
+          Please open it and click the button inside to confirm your subscription.</p>
+        <button class="btn dismiss" id="dismiss-button">Dismiss message</button>
+      </div>
+    </section>
+  </main>
+  <!-- Success message end -->
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer>
+  <script src="index.js"></script>
+</body>
+</html>

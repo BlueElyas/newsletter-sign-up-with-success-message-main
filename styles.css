@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    max-width: 1000px;
+    box-sizing: border-box;
+}
+
+/* Container */
+
+.container {
+    margin: 1em 1.5em;
+}
+
+/* Header design */
+.hero-image {
+    width: 100%;
+}
+
+.hero-text {
+    line-height: 1.5;
+    color: hsl(235, 18%, 26%);
+}
+
+.hero-text h1 {
+    font-size: 2.7rem;
+}
+
+.hero-text h5 {
+    margin-top: 1em;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: hsl(235, 18%, 26%);
+}
+
+.hero-image-desktop {
+    display: none;
+}
+
+/* List design */
+
+ul {
+    list-style-image: url(assets/images/icon-list.svg);
+    line-height: 1.5;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0 1.5em;
+}
+
+ul li {
+    padding: 0.5em 0;
+}
+
+/* Form design */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.labels {
+    font-weight: 700;
+    font-size: 0.8rem;
+    margin: 1em 0 0.7em 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+input,
+.btn {
+    padding: 1.25em 1.5em;
+    border-radius: 10px;
+}
+
+input {
+    border: 1px solid hsl(231, 7%, 60%);
+    margin-bottom: 1.5em;
+    font-size: 0.95rem;
+}
+
+input::placeholder {
+    color: hsl(231, 7%, 60%);
+}
+
+.btn {
+    background-color: hsl(234, 29%, 20%);
+    color: white;
+    font-weight: 700;
+    border: none;
+    margin-bottom: 1.5em;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+/* Media query for email-input section */
+
+@media (min-width: 768px) {
+
+    body {
+        background-color: hsl(235, 18%, 26%);
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 420px 1fr;
+        justify-items: center;
+        align-items: center;
+        border: 1px solid tomato;
+        padding: 2em;
+        border-radius: 30px;
+        background-color: white;
+        margin: 3em 0;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .grid h1 {
+        font-size: 3rem;
+    }
+    .grid h5,
+    .grid ul li {
+        font-size: 1rem;
+    }
+
+    .hero-image {
+        display: none;
+    }
+    .container {
+        grid-column: 2 / 3;
+    }
+
+    .hero-image-desktop {
+        display: block;
+        grid-column: 2/3 ;
+    }
+}
+
+/* Gratitude section */
+
+.gratitude {
+    display: flex;
+    flex-direction: column;
+}
+
+.gratitude img {
+    width: 20%;
+    margin-top: 7rem;
+}
+
+.gratitude h1 {
+    color: hsl(234, 29%, 20%);
+    font-size: 2.5rem;
+    padding: 0.5em 0;
+}
+
+.gratitude-text {
+    color: hsl(235, 18%, 26%);
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.dismiss {
+    margin-top: 17em;
+}
+
+.gratitude,
+.attribution {
+    display: none;
+}
+
+/* Media query for gratitude section */
+
+@media (min-width: 768px) {
+    .gratitude-desktop {
+        background-color: white;
+        width: 25%;
+        padding: 3em;
+        border-radius: 30px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .gratitude h1 {
+        font-size: 4rem;
+        word-wrap: break-word;
+    }
+
+    .gratitude img {
+        margin: 0;
+        width: 17%;
+    }
+
+    .dismiss {
+        margin: 3em 1em 1em 1em;
+
+    }
+}
+
+/* Invalid email output */
+
+.false-input-label {
+    display: none;
+    color: tomato;
+}
+
+.false-email-input {
+    background-color: hsl(4, 100%, 67%, 0.2);
+    border: 1px solid hsl(4, 100%, 67%);
+}
+
+.false-email-input::placeholder {
+    color: hsl(4, 100%, 67%);
+}
+
