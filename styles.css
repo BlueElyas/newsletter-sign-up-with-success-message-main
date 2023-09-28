@@ -80,6 +80,7 @@ input {
     border: 1px solid hsl(231, 7%, 60%);
     margin-bottom: 1.5em;
     font-size: 0.95rem;
+    cursor: pointer;
 }
 
 input::placeholder {
@@ -95,6 +96,14 @@ input::placeholder {
     font-size: 0.95rem;
     cursor: pointer;
 }
+
+/* Button hover effect */
+
+button:hover {
+    background: linear-gradient(hsl(4, 100%, 67%), rgb(255, 88, 107)) ;
+    box-shadow: 0px 0px 10px tomato;
+}
+
 
 /* Media query for email-input section */
 
