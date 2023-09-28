@@ -8,7 +8,7 @@ const gridContainer = document.getElementById("grid")
 const heroImageDesktop = document.getElementById("hero-image-desktop")
 
 subsrcibeBtn.addEventListener ('click', function() {
-    const email = emailInput.value.trim()
+    const email = emailInput.value
     if (isValidEmail(email)) {
         gratitudeSection.style.display = 'flex'
         subscribeSection.style.display = 'none'
